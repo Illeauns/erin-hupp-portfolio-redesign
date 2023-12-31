@@ -134,7 +134,7 @@ body {
     border-bottom: 1px solid #444;
     height: 100vh;
 }
-
+/* 
 .slider-wrapper {
     position: relative;
     justify-content: center;
@@ -177,7 +177,7 @@ body {
 
 .slider-nav a:hover {
     opacity: 1;
-}
+} */
 
 /* carousel test */
 .carousel {
@@ -215,7 +215,7 @@ body {
     width: 100%;
 }
 
-.carousel__button {
+/* .carousel__button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -231,7 +231,7 @@ body {
 
 .carousel__button--right {
     right: 100px;
-}
+} */
 
 /* .carousel__nav {
     display: flex;
@@ -285,6 +285,7 @@ body {
     cursor: pointer;
 }
 
+/* this only works at this position for some reason */
 .button-left {
     left: -30px;
 }
