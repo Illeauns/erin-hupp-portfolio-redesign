@@ -1,3 +1,16 @@
+const navMenu = document.querySelector('.nav-menu')
+const hamburger = document.querySelector('.hamburger')
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active")
+    navMenu.classList.toggle("active")
+})
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active")
+    navMenu.classList.remove("active")
+}))
+
 window.onload = function () {
     const carousels = document.querySelectorAll(".carousel") || [];
 
@@ -94,3 +107,5 @@ window.onload = function () {
         }
     }
 };
+
+

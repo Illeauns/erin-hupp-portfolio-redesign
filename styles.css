@@ -299,7 +299,8 @@ body {
 }
 
 .is-hidden {
-    display: none;
+    opacity: 30%;
+    pointer-events: none;
 }
 
 
@@ -490,52 +491,60 @@ body {
         height: 100%;
     }
 
-    .hamburger {
-        display: block;
+    .selected-works{
+        padding: 30px 0 50px 0;
     }
 
-    .hamburger .active .bar:nth-child(2) {
+    .hamburger {
+        display: block;
+        z-index: 9999;
+    }
+
+    
+    .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .hamburger .active .bar:nth-child(1) {
+    .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+        background-color: #000;
     }
 
-    .hamburger .active .bar:nth-child(3) {
-        transform: translateY(8px) rotate(-45deg);
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #000;
     }
+    
+    
+    #navbar ul li {
+        width: 100%;
+        margin: 0;
+    }
+    
 
-    /* #navbar ul{
-        justify-content: space-between;
-        width: 40%;
-        list-style: none;
-    }
-    #navbar ul li{
-        position: relative;
-        text-align: center;
-    }
-    #navbar ul li a{
-        font-size: .7vw;
-        text-decoration: none;
-    } */
-    .nav-menu {
+    .nav-menu{
         position: fixed;
-        left: -100%;
-        top: 70px;
+        left: 100%;
+        top: 0;
         gap: 0;
         flex-direction: column;
-        background-color: #AAA;
-        width: 100%;
+        background-color: #fff;
+        height: 100vh;
         text-align: center;
         transition: 0.3s;
     }
-
-    .nav-item {
-        margin: 16px 0;
+    #navbar ul {
+        width: 100%;
+        justify-content: center;
     }
-
-    .nav-menu .active {
+    #navbar ul li{
+        padding: 30px;
+    }
+    #navbar .nav-menu .nav-item a{
+       color: #000;
+       font-size: 2rem;
+    }
+    .nav-menu.active{
         left: 0;
     }
 
@@ -690,5 +699,33 @@ body {
 
     .hide {
         display: none;
+    }
+
+    #available-work .section-header{
+        margin-top: 50px;
+        height: 20vh;
+    }
+    #available-work .section-header p{
+        border: none;
+        line-height: 1.8;
+        font-size: 1rem;
+        margin: 30px 0 100px 0;
+    }
+    #available-work .available-work{
+        display: flex;
+        flex-direction: column;
+    }
+    #available-work .work-section{
+        width: 80%;
+        margin: 100px auto;
+    }
+    #available-work .work-section img{
+        width: 100%;
+        height: 260px;
+    }
+    #available-work .col-left h3, .col-right h3 {
+        font-size: 1rem;
+        text-decoration: underline;
+        margin: 20px auto;
     }
 }
